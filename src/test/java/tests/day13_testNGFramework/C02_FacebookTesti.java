@@ -21,7 +21,7 @@ public class C02_FacebookTesti {
 
         facebookPage.postaKutusu.sendKeys(faker.internet().emailAddress());
         facebookPage.sifreKutusu.sendKeys(faker.internet().password());
-        facebookPage.loginKutusu.click();
+        facebookPage.loginButonu.click();
 
         //4- Basarili giris yapilamadigini test edin
 

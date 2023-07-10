@@ -19,7 +19,7 @@ public class FacebookPage {
     public WebElement sifreKutusu;
 
     @FindBy(name = "login")
-    public WebElement loginKutusu;
+    public WebElement loginButonu;
 
     @FindBy(xpath = "//*[@class='_9ay7']")
     public WebElement hataMesaji;
