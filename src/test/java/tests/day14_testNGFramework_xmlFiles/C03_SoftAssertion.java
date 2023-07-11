@@ -9,7 +9,7 @@ import utilities.Driver;
 
 public class C03_SoftAssertion {
 
-    @Test
+    @Test(groups = "mini regression1")
     public void nutellaTesti(){
 
         // amazona gidin
@@ -20,13 +20,13 @@ public class C03_SoftAssertion {
 
         // 2- Istedigimiz tum testleri Soft Assert objesini kullanarak yapin
         // title`in best icermedigini test edin
-        String unExpectedIcerik = "Amazon";
+        String unExpectedIcerik = "best";
         String actualTitle = Driver.getDriver().getTitle();
 
         softAssert.assertFalse(actualTitle.contains(unExpectedIcerik),"Title istenmeyen icerik barindiriyor");
 
         //  url`in "https://www.amazon.com/" oldugunu test edin
-        String expectedUrl = "https://www.amazon.com";
+        String expectedUrl = "https://www.amazon.com/";
         String actualUrl = Driver.getDriver().getCurrentUrl();
 
         softAssert.assertEquals(actualUrl,expectedUrl,"Url beklenenden farkli");
@@ -37,7 +37,7 @@ public class C03_SoftAssertion {
 
         // arama sonuclarinin nutella icerdigini test edin
         String actualIcerik = amazonPage.sonucYaziElementi.getText();
-        String expectedIcerik = "kutella";
+        String expectedIcerik = "Nutella";
 
         softAssert.assertTrue(actualIcerik.contains(expectedIcerik),"Sonuclar Nutella icermiyor");
 

@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 
 public class C06_QDLoginTest {
 
-    @Test
+    @Test(groups = {"smoke","mini regression1","regression"})
     public void test01(){
 
         //1- https://www.qualitydemy.com/ anasayfasina gidin
