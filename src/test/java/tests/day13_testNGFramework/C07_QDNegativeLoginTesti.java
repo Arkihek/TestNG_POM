@@ -35,4 +35,37 @@ public class C07_QDNegativeLoginTesti {
         ReusableMethods.bekle(3);
         Driver.closeDriver();
     }
+
+    @Test
+    public void gecersizUsernameTest(){
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+
+        QualitydemyPage qualitydemyPage = new QualitydemyPage();
+        qualitydemyPage.loginButon.click();
+        qualitydemyPage.emailBox.sendKeys(ConfigReader.getProperty("qdGecersizID"));
+        qualitydemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdPassword"));
+        qualitydemyPage.loginBox.click();
+
+        Assert.assertTrue(qualitydemyPage.emailBox.isDisplayed());
+
+        ReusableMethods.bekle(3);
+        Driver.closeDriver();
+    }
+    @Test
+    public void gecersizUsernameVePasswordTest(){
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+
+        QualitydemyPage qualitydemyPage = new QualitydemyPage();
+        qualitydemyPage.loginButon.click();
+        qualitydemyPage.emailBox.sendKeys(ConfigReader.getProperty("qdGecersizID"));
+        qualitydemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
+        qualitydemyPage.loginBox.click();
+
+        Assert.assertTrue(qualitydemyPage.emailBox.isDisplayed());
+
+        ReusableMethods.bekle(3);
+        Driver.closeDriver();
+    }
+
+
 }
