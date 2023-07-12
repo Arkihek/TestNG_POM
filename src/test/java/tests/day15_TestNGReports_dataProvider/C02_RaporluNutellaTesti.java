@@ -29,7 +29,7 @@ public class C02_RaporluNutellaTesti extends TestBaseRapor {
 
         // sonuclarin Nutella icerdigini
         String actualIcerik = amazonPage.sonucYaziElementi.getText();
-        String expectedIcerik = "Kutella";
+        String expectedIcerik = "Nutella";
 
 
         Assert.assertTrue(actualIcerik.contains(expectedIcerik));
