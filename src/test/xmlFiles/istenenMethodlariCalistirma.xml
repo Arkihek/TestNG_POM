@@ -18,7 +18,7 @@
             </class>
         </classes>
     </test>
-    <test name="bir de paket ekleyelim dedik">
+    <test name="bir de package ekleyelim dedik">
         <packages>
             <package name="tests.day14_testNGFramework_xmlFiles"></package>
         </packages>
